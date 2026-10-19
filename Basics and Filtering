@@ -1,0 +1,39 @@
+Medium
+Patients with no city information
+1) List patients (first_name, last_name) who do not have a city recorded (city IS NULL)
+Code: 
+select first_name,last_name
+from patients
+where city is null;
+
+#Hard#
+1) Heaviest Patient Per City
+Show the city, patient's first_name, and their weight for the heaviest patient in each city.
+code:
+select city,first_name, weight
+from patients p
+where weight = (
+    select max(weight)
+    from patients 
+    where city = p.city
+);
+
+2) Oldest Patients By Gender
+For each gender, list the first_name and birth_date of the oldest patient(s).
+code:
+select first_name,birth_date,gender
+from patients p
+where birth_date =(
+    select min(birth_date)
+    from patients
+    where gender = p.gender
+);
+
+3) Patients with Long Names
+Show first_name and last_name of patients where the combined length exceeds 25 characters.
+code:
+select first_name,last_name
+from patients
+where length(first_name || last_name) > 25;
+
+
