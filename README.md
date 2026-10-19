@@ -1,4 +1,5 @@
 **DATABASE SCHEMA**
+
 **patients**
 patient_id- INTEGER PK
 first_name- VARCHAR(30)
