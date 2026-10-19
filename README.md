@@ -28,3 +28,10 @@ discharge_date- DATE
 diagnosis- VARCHAR(50)
 attending_doctor_id- INT
 admission_cost- DECIMAL(10,2)
+
+
+**province_names**
+province_id- CHAR(2) PK
+province_name- VARCHAR(30)
+
+
